@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(156, 98, 80); 
+
+}
+h1{
+color: rgb(192, 224, 209); 
+}
+
+p{
+font-size: 14pt;
+font-family: Arial,serif;
+color: whitesmoke; 
+}
+
+.boldTex{
+font-weight: bold;
+}

@@ -1,0 +1,173 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Week 10 Form </title>
+        <link rel = "stylesheet"; href = "W10.css";>
+        <style> 
+        body{
+            background-image: url('flowers.jpg');
+            background-position: center;
+        }
+       form{ 
+        max-width: 400px;
+        margin: 20px auto; 
+        padding: 20px; 
+        border-radius: 10px; /* add rounded corners */
+        box-shadow: 0 0 10px rgb(250, 250, 255); /* add a subtle box shaddow */
+       }
+       
+      input{
+        margin-bottom: 20px;
+
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid whitesmoke; 
+        }
+
+        label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        label.displayInline{
+            display: inline; 
+        }
+
+        input:focus, textarea:focus{ 
+            outline: none; 
+            border-color:  rgba(66, 26, 15, 0.6);
+            box-shadow: 0 0 10px rgb(250, 250, 255); /* add a subtle box shaddow */
+        }
+
+        input[type="checkbox"],  input[type="radio"]{
+            width: 16px;
+            height: 16px; 
+            border: 2px solid seashell;
+            border-radius: 3px;
+            display: inline; 
+            margin-bottom: 0px;
+        }
+
+        input[type="submit"], input[type="reset"]{
+            width: 25%;
+            padding: 10px;
+            border: none; 
+            background:  seashell;
+            color:  rgba(66, 26, 15, 0.6);
+            cursor: pointer;
+        }
+
+        </style>
+    </head>
+    <body>
+        <!-- This is the heading 1 tag, there should only be 1 h1 tag on a page.
+            Make sure it is descriptive for what the page is all about. 
+        -->
+        <div class="centered-div">
+        <div class="content">
+        <h1> Garden Visitor Application</h1>
+            <!-- Nae and id should be the same (name = used by the server);
+             (id = used by CSS ad JavaScript)
+            action - The page that this form submits to for surver side prosessing 
+            can be the same page or a different page.
+            method - using get will put the values i te querystring 
+            - post is the better option to use if you have a server to process the inputs. 
+               -->
+
+        <form name="TheForm" id="theForm" action="#" method="get"> 
+            <!-- Input Text -->
+            <label for="fullName">Full Name: </label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Name" required><br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="yourname@domain.com" required><br><br>
+
+            <!-- Password Input -->
+            <label for="ThePassword">Password: </label>
+            <input type="password" name="thePassword" id="thePassword" required><br><br>
+
+            <!-- Number Input -->
+            <label for="favNum">Favorite Number: </label>
+            <input type="number" name="favNum" id="favNum" ><br><br>
+
+            <!-- Date Picker -->
+            <label for="TravelDate">Travel Date: </label>
+            <input type="date" name="travelDate" id="TravelDate" ><br><br>
+
+            <!-- Time Picker -->
+            <label for="TravelTime">Travel Time: </label>
+            <input type="time" name="travelTime" id="travelTime" ><br><br>
+
+            <!-- Color Picker -->
+            <label for="favColor">Favorite Color: </label>
+            <input type="color" name="favColor" id="favColor" ><br><br>
+
+            <!-- Range Slider -->
+            <label for="range">How excited are you for this trip?: </label>
+            <input type="range" name="range" id="range" min="0" max="10" step="1">
+
+            <!-- Telephone number -->
+            <label for="phone">Phone Number: </label>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]-{4}" placeholder="123-456-7890"><br><br>
+
+            <!-- URL Input -->
+            <label for="url">Website: </label>
+            <input type="url" name="url" id="url" placeholder="https://www.example.com" >
+
+            <!-- Textarea -->
+            <label for="reason">Why do you want to visit our garden?:</label>
+            <textarea name="reason" id="reason" rows="5" cols="50" placeholder="Enter your explination here."></textarea><br><br>
+
+            <!-- Radio Buttons -->
+                <label> Favorite Pet: </label>
+                <input type="radio" id="cat" name="pet" value="cat">
+                <label for="cat" class="displayInline">Cat</label><br>
+                <input type="radio" id="dog" name="pet" value="dog">
+                <label for="dog" class="displayInline">Dog</label><br>
+                <input type="radio" id="turtle" name="pet" value="turtle">
+                <label for="turtle" class="displayInline">Turtle</label><br><br>
+
+            <!-- Checkboxes -->
+            <label>Interests:</label>
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music" class="displayInline">Music</label><br>
+
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports" class="displayInline">Sports</label><br>
+
+            <input type="checkbox" id="movies" name="interests" value="movies">
+            <label for="movies" class="displayInline">Movies</label><br>
+
+            <input type="checkbox" id="garden" name="interests" value="garden" checked>
+            <label for="garden" class="displayInline">Garden</label><br><br>
+
+            <!-- Dropdown Menu -->
+            <label for="region">Region:</label>
+            <select id="region" nae="region">
+                <option value="Southwest">Southwest</option>
+                <option value="Northwest">Northwest</option>
+                <option value="Midwest">Midwest</option>
+                <option value="Southeast">Southeast</option>
+                <option value="Northeast">Northeast</option>
+            </select>
+
+            <!-- Reset Button -->
+            <input type="reset" value="Reset">
+            
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+    </div>
+       
+    </body>
+    </html>

@@ -1,0 +1,63 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>W8 Canvas Demo </title>
+        <style>
+            body{
+                margin: 0; 
+                /* Prevent scollbars */
+                overflow: hidden;
+            }
+
+            canvas{
+                width: 100px; 
+                /* 100% of the viewport height */
+                height: 100h;
+                /* Remove any extra spaceing */
+                display: block;
+            }
+
+            #myCanvas{
+                background-color: maroon;
+            }
+
+            .boldText{
+                color: blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <canvas id="myCanvas" name="myCanvas"></canvas>
+
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getCOntext("2d");
+
+            canvas.width = window.ierWidth;
+            canvas.height = widow,ierHeight; 
+
+            context.fillStyle= "blue";
+            context.fillRect(50, 50, 200, 100); // coord, y coord, width, 
+
+            /* Create a line */
+            context.moveTo(20, 20); // this is a starting point of the line - x and y coordinates 
+            context.lineTo(20, 400); // This is the x and y coordinates of where the line ends 
+            context.stroke(); // draw the line 
+
+            /* Create another */
+            context.moveTo(20, 20); // this is a starting point of the line - x and y coordinates 
+            context.lineTo(300, 160); // This is the x and y coordinates of where the line ends 
+            context.stroke(); // draw the line 
+
+            /* Create a circle */
+            context.beginPath(); 
+            context.arc(100, 250, 50, 0, 2 * Math.PI); 
+            context.stroke();  
+
+        </script>
+    </body>
+    </html>

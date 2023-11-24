@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>W9 Gallery</title>
+
+        <style> 
+            body{
+                margin: 0;
+        
+            }
+
+            .container{
+                display: flex; 
+                flex-wrap: wrap; 
+                padding: 0 4px;
+            }
+
+            .galleryColumn{
+                flex: 25%; 
+                max-width: 25%;
+                padding: 0 4px;
+            }
+
+            .galleryColumn img{
+                margin-top: 8px;
+                vertical-align: middle; 
+                width: 100%; 
+            }
+
+            @media (max-width: 800px){
+                .galleryColumn{
+                    flex: 50%;
+                    max-width: 50%; 
+                }
+            }
+
+            @media (max-width: 600px){
+                .galleryColumn{
+                    flex: 100%;
+                    max-width: 100%; 
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1> W9 Gallery Flexbox Example </h1>
+
+        <div class="container">
+            <div class="galleryColumn">
+                <img src="img1.jpg" alt="Meme 1">
+                <img src="img2.jpg" alt="Meme 2">
+            </div>
+
+            <div class="galleryColumn">
+                <img src="img3.jpg" alt="Meme 3">
+                <img src="img4.jpg" alt="Meme 4">
+            </div>
+
+            <div class="galleryColumn">
+                <img src="img5.jpg" alt="Meme 5">
+                <img src="img6.jpg" alt="Meme 6">
+            </div>
+
+            <div class="galleryColumn">
+                <img src="img7.jpg" alt="Meme 7">
+                <img src="img8.jpg" alt="Meme 8">
+            </div>
+        </div>
+    </body>
+    </html>

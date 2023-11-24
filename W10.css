@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+p{
+    margin: 20px;
+    padding: 10px;
+    font-size: x-large;
+}
+
+/* this is a custom class - custom classes start with a .
+   use this to create a semi transparent box so it is easier to read the text */
+.content{
+    background-color: rgba(66, 26, 15, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+ /* This will center stuff */
+ .centered-div{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+

@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    height: 100px; 
+    width: 100%; 
+    background-color: rgb(168, 187, 168); 
+    color: rgb(109, 102, 131);
+    text-align: center;
+}
+main{
+    padding: 30px;
+    width: 80%;
+}
+
+aside{
+    position: fixed;
+    right: 0%;
+    /* 
+     I changed the top percentage from 0% to 10% so that it coected with the bottom of the title banner
+    */
+    top: 10%;
+    height: 100%;
+    width: 20%;
+    vertical-align: middle; 
+    padding-top: 150px;
+  /* 
+    I just wanted there to be some type of color on this side because it look plain and dead (IMO) 
+  */ 
+    background-color: rgb(203, 219, 203);
+    color:rgb(109, 102, 131);
+
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    width: 100%; 
+    background-color:rgb(109, 102, 131);
+    color:rgb(168, 187, 168);
+    padding: 20px; 
+}
